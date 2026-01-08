@@ -91,7 +91,7 @@ export default function Home() {
             }}
           >
             <img 
-              src="/images/banner.png" 
+              src="/pacer-site/images/banner.png" 
               alt="Banner" 
               style={{ 
                 width: '100%', 
@@ -161,7 +161,7 @@ export default function Home() {
           overflow: 'hidden'
         }}>
           <img 
-            src="/images/timeline.png" 
+            src="/pacer-site/images/timeline.png" 
             alt="History Timeline" 
             style={{ 
               width: '100%', 
