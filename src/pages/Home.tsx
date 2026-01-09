@@ -92,7 +92,7 @@ export default function Home() {
           >
             <img 
               src="/pacer-site/images/banner.png" 
-              alt="Banner" 
+              alt="Controller hardware connected to virtual buildings with controls for various systems like hot water, refrigeratgion, HVAC, and lighting. Then a list of software that works with PACER including ComStock, ResStock, UBANopt, OpenStudio, EnergyPlus, BOPTEST, Alfalfa, and Modelica." 
               style={{ 
                 width: '100%', 
                 height: '100%', 
@@ -138,7 +138,7 @@ export default function Home() {
         }}>
             <Typography variant="body1" paragraph>
                 <ul>
-                  <li><a href='https://github.com/NREL/alfalfa'>Alfalfa Repo on GitHub</a> </li>
+                  <li><a href='https://github.com/NREL/alfalfa'>Alfalfa Repository on GitHub</a> </li>
                   <li><a href='https://github.com/NREL/alfalfa/wiki/Related-Repos'>Alfalfa Wiki</a> </li>
                   <li><a href='https://github.com/NREL/boptest-service'>BOPTEST Service</a></li>
                 </ul>
@@ -162,7 +162,7 @@ export default function Home() {
         }}>
           <img 
             src="/pacer-site/images/timeline.png" 
-            alt="History Timeline" 
+            alt="Historical timeline showing PACER's evolution and key milestones from inception to present. 2017-2018: software start. IN2 Startup incubator (~150k); ​2019: into physical lab. Commercial Building Research Infrastructure HIL capability at NREL/ESIF – RTU coordination focus​2021-2022: first cybersecurity. BUILD-SOS, BTO-funded cybersecurity project​ 2022 : start to scale. LDRD (Connected Community Experimental Twin) project to enable equity/behind-the-meter research for NREL ARIES platform (322k);2022: NREL research infrastructure build out: Building Loads and Controls Emulation ($590k); 2022: new feature. OpenADR support for Residential Cold Climate Heat Pump Challenge; 2022-2025: Dedicated BTO funding ~$150-250k/year; 2023-2024: new feature NREL research infrastructure build out: commissioning DERMS for buildings research ($1.1M);2023-ongoing: Advanced Thermal Test and Emulation Network (ATTEN); 2023-2024: large research projects. DOD/ESTCP OpenADR on islanded microgrid ($1.8M​; 2024-2026: large research projects. CESER-funded emulation effort focused on grid impacts of cyberattacks on behind the meter energy equipment (~$5M); 2025: Evolves to modular and flexible ecosystem of capabilities. support Commercial HVAC Challenge with novel HIL/CHIL capabilities; 2026: ITO $120k to advance industrial load flexibility, data center focus" 
             style={{ 
               width: '100%', 
               height: 'auto',

@@ -86,13 +86,21 @@ export default function Layout() {
       alignItems: 'center', 
       flexDirection: 'column', 
       minHeight: '100vh', 
-      pt: 3, 
-      px: 2,
+      width: '100%',
       background: 'radial-gradient(ellipse at center, #025589 -50%, #ffffff 80%)'
     }}>
       <CssBaseline />
-      <AppBar position="static" sx={{ bgcolor: '#025589', borderRadius: 15, width: '100%', maxWidth: 1200 }}>
-        <Toolbar>
+      <Box sx={{ 
+        width: '100%', 
+        maxWidth: 1200, 
+        pt: 3, 
+        px: 2,
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center'
+      }}>
+        <AppBar position="static" sx={{ bgcolor: '#025589', borderRadius: 15, width: '100%' }}>
+          <Toolbar>
           <Typography 
             variant="h6" 
             sx={{ flexGrow: 1, cursor: 'pointer', fontSize: '1.5rem', fontWeight: 600 }} 
@@ -130,7 +138,6 @@ export default function Layout() {
           justifyContent: 'center',
           alignItems: 'center',
           width: '100%',
-          maxWidth: 1200,
         }}
       >
         <Box sx={{ width: '100%' }}>
@@ -139,7 +146,7 @@ export default function Layout() {
       </Box>
 
       {/* Footer */}
-      <Box component="footer" sx={{ py: 2, textAlign: 'center', bgcolor: 'background.paper', width: '100%', maxWidth: 1200 }}>
+      <Box component="footer" sx={{ py: 2, textAlign: 'center', bgcolor: 'background.paper', width: '100%' }}>
         <Typography variant="body2" color="text.secondary">The National Laboratory of the Rockies is a national laboratory of the <a href="https://www.energy.gov">U.S. Department of Energy</a>, <a href="https://www.energy.gov/office-critical-minerals-and-energy-innovation">Office of Critical Minerals and Energy Innovation</a>, operated under Contract No. DE-AC36-08GO28308</Typography>
       </Box>
 
@@ -151,6 +158,7 @@ export default function Layout() {
           ))}
         </BottomNavigation>
       )}
+      </Box>
     </Box>
   )
 }
