@@ -83,8 +83,8 @@ export default function Layout() {
     <Box sx={{ 
       display: 'flex', 
       justifyContent: 'center', 
-      alignItems: 'center', 
       flexDirection: 'column', 
+      alignItems: 'center',
       minHeight: '100vh', 
       width: '100%',
       background: 'radial-gradient(ellipse at center, #025589 -50%, #ffffff 80%)'
@@ -96,8 +96,7 @@ export default function Layout() {
         pt: 3, 
         px: 2,
         display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center'
+        flexDirection: 'column'
       }}>
         <AppBar position="static" sx={{ bgcolor: '#025589', borderRadius: 15, width: '100%' }}>
           <Toolbar>
@@ -136,7 +135,6 @@ export default function Layout() {
           p: 3,
           display: 'flex',
           justifyContent: 'center',
-          alignItems: 'center',
           width: '100%',
         }}
       >

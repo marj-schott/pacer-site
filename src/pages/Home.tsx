@@ -1,4 +1,5 @@
 import { Container, Typography, Box, Button, Card, CardContent, CardActions } from '@mui/material'
+import { Link } from 'react-router-dom'
 import TuneIcon from '@mui/icons-material/Tune'
 import BoltIcon from '@mui/icons-material/Bolt'
 import SecurityIcon from '@mui/icons-material/Security'
@@ -7,11 +8,11 @@ import CastForEducation from '@mui/icons-material/CastForEducation'
 
 export default function Home() {
   const cards = [
-    { title: 'Controls', description: 'Text here.', icon: <TuneIcon fontSize="large" color="primary" /> },
+    { title: 'Controls', description: 'PACER is the backbone of a full laboratory environment that connects high-fidelity virtual buildings to electric grid emulation and real-world control hardware and interfaces..', icon: <TuneIcon fontSize="large" color="primary" /> },
     { title: 'Cybersecurity', description: 'Text here.', icon: <SecurityIcon fontSize="large" color="primary" /> },
-    { title: 'DERMS and Microgrid', description: 'Text here.', icon: <BoltIcon fontSize="large" color="primary" /> },
+    { title: 'DERMS and Microgrid', description: 'DER devices and building automation systems (BAS) can interact with realistic building models in real time.', icon: <BoltIcon fontSize="large" color="primary" /> },
     { title: 'Thermal Energy Systems', description: 'Text here.', icon: <DeviceThermostatIcon fontSize="large" color="primary" /> },
-    { title: 'Cybersecurity', description: 'Text Here', icon: <SecurityIcon fontSize="large" color="primary" /> },
+    { title: 'Cybersecurity', description: 'Design mitigation strategies that engineer cyber risk out of the complex, multi-owner systems that make up the distribution grid edge. ', icon: <SecurityIcon fontSize="large" color="primary" /> },
     { title: 'Workforce Training', description: 'Text here', icon: <CastForEducation fontSize="large" color="primary" /> },
   ]
   return (
@@ -102,6 +103,21 @@ export default function Home() {
           </Box>
         </Box>
 
+        <Box sx={{ 
+          mt: 4, 
+          mb: 4,
+          bgcolor: '#0c7c59', 
+          p: 3, 
+          borderRadius: 2, 
+          boxShadow: 1,
+          border: '1px solid',
+          borderColor: 'divider'
+        }}>
+          <Typography variant="body1" sx={{ color: 'white' }}>
+            PACER is operated and extended by multidisciplinary teams of engineers, researchers, and technicians who design experiments, maintain the lab stack, interpret results, and translate findings into deployable control strategies, making PACER a combination of software, physical testbed, and skilled human expertise rather than a standalone code repository, testbed, or one-off project.
+          </Typography>
+        </Box>
+
         <Typography variant="h2" component="h2" gutterBottom sx={{ mt: 4 }} id="capabilities">
          Capabilities
         </Typography>
@@ -173,7 +189,7 @@ export default function Home() {
 
 
         <Box sx={{ mt: 3 }}>
-          <Button variant="contained" href="/virtual-tour">
+          <Button variant="contained" component={Link} to="/virtual-tour">
             Take the Virtual Tour
           </Button>
         </Box>

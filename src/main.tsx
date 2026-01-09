@@ -34,14 +34,14 @@ const theme = createTheme({
       fontWeight: 500,
     },
     h6: {
-      fontSize: '1.0rem',
+      fontSize: '1.7rem',
       fontWeight: 500,
     },
     body1: {
-      fontSize: '1.3rem',
+      fontSize: '1.5rem',
     },
       body2: {
-      fontSize: '1.0rem',
+      fontSize: '1.1rem',
     },
   },
   palette: {
@@ -49,7 +49,10 @@ const theme = createTheme({
       main: '#025589',
     },
     secondary: {
-      main: '#00bcd4',
+      main: '#d3a133',
+    },
+    text: {
+      primary: '#000000',
     },
   },
 })
