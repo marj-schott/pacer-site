@@ -130,9 +130,10 @@ export default function Layout() {
           justifyContent: 'center',
           alignItems: 'center',
           width: '100%',
+          maxWidth: 1200,
         }}
       >
-        <Box sx={{ width: '100%', maxWidth: 1200 }}>
+        <Box sx={{ width: '100%' }}>
           <Outlet />
         </Box>
       </Box>
