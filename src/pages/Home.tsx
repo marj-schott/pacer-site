@@ -1,20 +1,67 @@
-import { Container, Typography, Box, Button, Card, CardContent, CardActions } from '@mui/material'
+import { Container, Typography, Box, Button, Card, CardContent, CardActions, Dialog, DialogTitle, DialogContent, DialogActions } from '@mui/material'
 import { Link } from 'react-router-dom'
+import { useState } from 'react'
 import TuneIcon from '@mui/icons-material/Tune'
 import BoltIcon from '@mui/icons-material/Bolt'
 import SecurityIcon from '@mui/icons-material/Security'
 import DeviceThermostatIcon from '@mui/icons-material/DeviceThermostat'
 import CastForEducation from '@mui/icons-material/CastForEducation'
+import HostIcon from '@mui/icons-material/Dns'
 
 export default function Home() {
+  const [openDialog, setOpenDialog] = useState<number | null>(null)
   const cards = [
-    { title: 'Controls', description: 'PACER is the backbone of a full laboratory environment that connects high-fidelity virtual buildings to electric grid emulation and real-world control hardware and interfaces..', icon: <TuneIcon fontSize="large" color="primary" /> },
-    { title: 'Cybersecurity', description: 'Text here.', icon: <SecurityIcon fontSize="large" color="primary" /> },
-    { title: 'DERMS and Microgrid', description: 'DER devices and building automation systems (BAS) can interact with realistic building models in real time.', icon: <BoltIcon fontSize="large" color="primary" /> },
-    { title: 'Thermal Energy Systems', description: 'Text here.', icon: <DeviceThermostatIcon fontSize="large" color="primary" /> },
-    { title: 'Cybersecurity', description: 'Design mitigation strategies that engineer cyber risk out of the complex, multi-owner systems that make up the distribution grid edge. ', icon: <SecurityIcon fontSize="large" color="primary" /> },
-    { title: 'Workforce Training', description: 'Text here', icon: <CastForEducation fontSize="large" color="primary" /> },
+    { 
+      title: 'Controls', 
+      description: 'Some text here to explain the controls capabilities.', 
+      icon: <TuneIcon fontSize="large" color="primary" />,
+      detailContent: 'Detailed information about Controls capabilities, including advanced building control systems, real-time grid integration, and hardware-in-the-loop testing.',
+      detailImage: '/pacer-site/images/demand-service-diagram.png'
+    },
+    { 
+      title: 'Cybersecurity', 
+      description: 'Text here.', 
+      icon: <SecurityIcon fontSize="large" color="primary" />,
+      detailContent: 'Comprehensive cybersecurity testing and validation for distributed energy resources and building automation systems.',
+      detailImage: '/pacer-site/images/cyber-76097.png'
+    },
+    { 
+      title: 'DERMS and Microgrid', 
+      description: 'DER devices and building automation systems (BAS) can interact with realistic building models in real time.', 
+      icon: <BoltIcon fontSize="large" color="primary" />,
+      detailContent: 'Advanced DERMS testing capabilities including microgrid control, demand response, and grid integration scenarios.',
+      detailImage: '/pacer-site/images/illustration_military_base_microgrid.png'
+    },
+    { 
+      title: 'Thermal Energy Systems', 
+      description: 'Text here.', 
+      icon: <DeviceThermostatIcon fontSize="large" color="primary" />,
+      detailContent: 'Testing and validation of thermal energy systems including HVAC, heat pumps, and thermal storage solutions.',
+      detailImage: '/pacer-site/images/themal-systems.png'
+    },
+    { 
+      title: 'Data Centers', 
+      description: 'Text here. ', 
+      icon: <HostIcon fontSize="large" color="primary" />,
+      detailContent: 'Design mitigation strategies that engineer cyber risk out of the complex, multi-owner systems that make up the distribution grid edge.',
+      detailImage: '/pacer-site/images/101317.jpg'
+    },
+    { 
+      title: 'Workforce Training', 
+      description: 'Text here', 
+      icon: <CastForEducation fontSize="large" color="primary" />,
+      detailContent: 'Hands-on workforce training programs for building automation, energy management, and grid-interactive systems.',
+      detailImage: '/pacer-site/images/iconnect.png'
+    },
   ]
+
+  const handleOpenDialog = (index: number) => {
+    setOpenDialog(index)
+  }
+
+  const handleCloseDialog = () => {
+    setOpenDialog(null)
+  }
   return (
     <Container maxWidth="lg">
       <Box sx={{ my: 4 }}>
@@ -134,12 +181,52 @@ export default function Home() {
                   <Typography variant="body2" color="text.secondary" sx={{ whiteSpace: 'normal', wordBreak: 'break-word' }}>{card.description}</Typography>
                 </CardContent>
                 <CardActions>
-                  <Button size="small">Learn more</Button>
+                  <Button size="small" onClick={() => handleOpenDialog(i)}>Learn more</Button>
                 </CardActions>
               </Card>
             </Box>
           ))}
         </Box>
+
+        {/* Dialog for card details */}
+        <Dialog 
+          open={openDialog !== null} 
+          onClose={handleCloseDialog}
+          maxWidth="md"
+          fullWidth
+        >
+          {openDialog !== null && (
+            <>
+              <DialogTitle>
+                <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+                  {cards[openDialog].icon}
+                  {cards[openDialog].title}
+                </Box>
+              </DialogTitle>
+              <DialogContent>
+                <Typography variant="body1" paragraph>
+                  {cards[openDialog].detailContent}
+                </Typography>
+                {cards[openDialog].detailImage && (
+                  <Box sx={{ mt: 2, textAlign: 'center' }}>
+                    <img 
+                      src={cards[openDialog].detailImage} 
+                      alt={cards[openDialog].title}
+                      style={{ 
+                        maxWidth: '100%', 
+                        height: 'auto',
+                        borderRadius: '8px'
+                      }} 
+                    />
+                  </Box>
+                )}
+              </DialogContent>
+              <DialogActions>
+                <Button onClick={handleCloseDialog}>Close</Button>
+              </DialogActions>
+            </>
+          )}
+        </Dialog>
 
              <Typography variant="h2" component="h2" gutterBottom sx={{ mt: 4 }} id="active-work">
        Active Work
