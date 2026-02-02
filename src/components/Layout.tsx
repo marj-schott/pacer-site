@@ -14,6 +14,9 @@ import { useTheme } from '@mui/material/styles'
 import HomeIcon from '@mui/icons-material/Home'
 import TourIcon from '@mui/icons-material/Tour'
 import InfoIcon from '@mui/icons-material/Info'
+import MiscellaneousServicesIcon from '@mui/icons-material/MiscellaneousServices'
+import HistoryIcon from '@mui/icons-material/History'
+import WorkIcon from '@mui/icons-material/Work'
 
 export default function Layout() {
   const theme = useTheme()
@@ -23,9 +26,9 @@ export default function Layout() {
 
   const routes = [
     { label: 'Home', path: '/', icon: <HomeIcon /> },
-    { label: 'Capabilities', path: '/#capabilities', icon: <InfoIcon /> },
-    { label: 'Active Work', path: '/#active-work', icon: <InfoIcon /> },
-    { label: 'History', path: '/#history', icon: <InfoIcon /> },
+    { label: 'Capabilities', path: '/#capabilities', icon: <MiscellaneousServicesIcon /> },
+    { label: 'Active Work', path: '/#active-work', icon: <WorkIcon /> },
+    { label: 'History', path: '/#history', icon: <HistoryIcon /> },
     { label: 'Virtual Tour', path: '/virtual-tour', icon: <TourIcon /> },
   ]
 

@@ -16,7 +16,7 @@ export default function Home() {
       description: 'Some text here to explain the controls capabilities.', 
       icon: <TuneIcon fontSize="large" color="primary" />,
       detailContent: 'Detailed information about Controls capabilities, including advanced building control systems, real-time grid integration, and hardware-in-the-loop testing.',
-      detailImage: '/pacer-site/images/demand-service-diagram.png'
+      detailImage: '/pacer-site/images/controls.png'
     },
     { 
       title: 'Cybersecurity', 
@@ -73,7 +73,7 @@ export default function Home() {
               borderBottomLeftRadius: 8,
               borderTopRightRadius: 0,
               borderBottomRightRadius: 0,
-              borderRight: '4px solid #0c7c59',
+              borderRight: '4px solid #58a4b0',
               p: 4,
               position: 'relative',
               flex: 1,
@@ -84,7 +84,6 @@ export default function Home() {
                 left: 0,
                 right: 0,
                 bottom: 0,
-                backgroundColor: 'e1e1e1',
                 borderTopLeftRadius: 8,
                 borderBottomLeftRadius: 8,
                 borderTopRightRadius: 0,
@@ -97,25 +96,19 @@ export default function Home() {
                 Platform for Advanced Controls Evaluation and Research (PACER) 
               </Typography>
               <Typography variant="h3" component="h2" gutterBottom>
-                Software
+                What is PACER?
               </Typography>
               <Typography variant="body1" paragraph>
-                <ul>
-                  <li>Virtual building web service</li>
-                  <li>Automated workflows to source buildings from BuildStock, URBANopt, Modelica, etc</li>
-                  <li>DevOps&mdash;cloud deployment resources</li>
-                  <li>Operational technology interfaces (eg BACnet, OpenADR) so virtual buildings communicate like real ones</li>
-                </ul>
+                PACER is a suitcase size, collection of device and supervisory commercial off-the-shelf control equipment and custom hardware used to emulate an entire facility’s control environment in a lab or in the field. 
               </Typography>
-
+            
               <Typography variant="h3" component="h2" gutterBottom>
-                Hardware-in-the-Loop
+                <br></br>
+                Why is PACER important?
+              
               </Typography>
               <Typography variant="body1" paragraph>
-                <ul>
-                  <li>Data and communication infrastructure</li>
-                  <li>Custom electronics: bench controllers connect real control systems to simulation</li>
-                </ul>
+               It fills a gap and is a gymnasium where AI can interact and train itself with real systems leading to rapid innovation. Applications are broad: cyber, resilience, enabling more power, workforce training and more!
               </Typography>
             </Box>
           </Box>
@@ -125,7 +118,7 @@ export default function Home() {
               borderRadius: 0,
               position: 'relative',
               flex: 1,
-              bgcolor: 'background.paper',
+              bgcolor: '#2b303a',
               border: '1px solid',
               borderColor: 'divider',
               borderTopLeftRadius: 0,
@@ -153,8 +146,8 @@ export default function Home() {
         <Box sx={{ 
           mt: 4, 
           mb: 4,
-          bgcolor: '#0c7c59', 
-          p: 3, 
+          bgcolor: '#2b303a',
+          p: 3,
           borderRadius: 2, 
           boxShadow: 1,
           border: '1px solid',

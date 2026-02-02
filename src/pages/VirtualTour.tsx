@@ -53,7 +53,7 @@ export default function VirtualTour() {
             <Tab label="Lab Setup" id="virtual-tour-tab-1" aria-controls="virtual-tour-tabpanel-1" />
             <Tab label="Hardware" id="virtual-tour-tab-2" aria-controls="virtual-tour-tabpanel-2" />
             <Tab label="Software" id="virtual-tour-tab-3" aria-controls="virtual-tour-tabpanel-3" />
-            <Tab label="Experiments" id="virtual-tour-tab-4" aria-controls="virtual-tour-tabpanel-4" />
+            <Tab label="Projects" id="virtual-tour-tab-4" aria-controls="virtual-tour-tabpanel-4" />
           </Tabs>
         </Box>
 
@@ -64,6 +64,7 @@ export default function VirtualTour() {
           <Typography variant="body1" paragraph>
             Welcome to the PACER virtual tour. Explore our facility, capabilities, and research through these interactive tabs.
           </Typography>
+  
           <Box sx={{ 
             mt: 2, 
             bgcolor: 'background.paper',
@@ -86,6 +87,55 @@ export default function VirtualTour() {
                 display: 'block'
               }} 
             />
+          
+          </Box>
+
+          <Box sx={{ 
+            display: 'flex', 
+            gap: 2, 
+            mt: 3 
+          }}>
+            <Box sx={{ 
+              flex: 1,
+              bgcolor: 'background.paper',
+              p: 3,
+              borderRadius: 2,
+              border: '1px solid',
+              borderColor: 'divider'
+            }}>
+              <Typography variant="h6" gutterBottom>
+                Software
+              </Typography>
+              <Typography variant="body1">
+                <Typography variant="body1" paragraph>
+                <ul>
+                  <li>Virtual building web service</li>
+                  <li>Automated workflows to source buildings from BuildStock, URBANopt, Modelica, etc</li>
+                  <li>DevOps&mdash;cloud deployment resources</li>
+                  <li>Operational technology interfaces (eg BACnet, OpenADR) so virtual buildings communicate like real ones</li>
+                </ul>
+              </Typography>
+              </Typography>
+            </Box>
+
+            <Box sx={{ 
+              flex: 1,
+              bgcolor: 'background.paper',
+              p: 3,
+              borderRadius: 2,
+              border: '1px solid',
+              borderColor: 'divider'
+            }}>
+              <Typography variant="h6" gutterBottom>
+                Hardware
+              </Typography>
+              <Typography variant="body1">
+                 <ul>
+                  <li>Data and communication infrastructure</li>
+                  <li>Custom electronics: bench controllers connect real control systems to simulation</li>
+                </ul>
+              </Typography>
+            </Box>
           </Box>
         </TabPanel>
 
@@ -98,7 +148,7 @@ export default function VirtualTour() {
           </Typography>
           <Box sx={{ 
             mt: 2, 
-            bgcolor: 'background.paper',
+            // bgcolor: 'background.paper',
             p: 2,
             borderRadius: 2,
             border: '1px solid',
@@ -109,7 +159,16 @@ export default function VirtualTour() {
             justifyContent: 'center'
           }}>
             <Typography variant="body2" color="text.secondary">
-              [Lab setup image placeholder]
+              <img 
+              src="/pacer-site/images/graphic-aries.png" 
+              alt="image shwowing the aries connect to PACER through the ARES 
+            " 
+              style={{ 
+                width: '100%', 
+                height: 'auto',
+                display: 'block'
+              }} 
+            />
             </Typography>
           </Box>
         </TabPanel>
