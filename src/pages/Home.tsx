@@ -13,45 +13,45 @@ export default function Home() {
   const cards = [
     { 
       title: 'Controls', 
-      description: 'Some text here to explain the controls capabilities.', 
-      icon: <TuneIcon fontSize="large" color="primary" />,
-      detailContent: 'Detailed information about Controls capabilities, including advanced building control systems, real-time grid integration, and hardware-in-the-loop testing.',
-      detailImage: '/pacer-site/images/controls.png'
+      icon: <TuneIcon sx={{ fontSize: 60 }} color="primary" aria-hidden="true" />,
+      detailContent: 'PACER interfaces with a diverse range of energy control systems, extending from grid operational technology (OT) to commercial HVAC and residential end devices.',
+      detailImage: '/pacer-site/images/controls2.png',
+      detailImageAlt: 'Diagram showing PACER helping to bridge the gap between grid operational technology, commercial HVAC, and residential end devices by providing a versatile testing platform for control strategies across various energy systems'
     },
     { 
-      title: 'Cybersecurity', 
-      description: 'Text here.', 
-      icon: <SecurityIcon fontSize="large" color="primary" />,
-      detailContent: 'Comprehensive cybersecurity testing and validation for distributed energy resources and building automation systems.',
-      detailImage: '/pacer-site/images/cyber-76097.png'
+      title: 'Cyber-Security', 
+      icon: <SecurityIcon sx={{ fontSize: 60 }} color="primary" aria-hidden="true" />,
+      detailContent: 'Closed-loop emulation environments to develop and demonstrate novel technologies that improve cyber security posture for hardwired and cloud-connected devices.',
+      detailImage: '/pacer-site/images/cyber-76097.png',
+      detailImageAlt: 'Cybersecurity testing infrastructure showing network security layers and threat detection systems'
     },
     { 
       title: 'DERMS and Microgrid', 
-      description: 'DER devices and building automation systems (BAS) can interact with realistic building models in real time.', 
-      icon: <BoltIcon fontSize="large" color="primary" />,
-      detailContent: 'Advanced DERMS testing capabilities including microgrid control, demand response, and grid integration scenarios.',
-      detailImage: '/pacer-site/images/illustration_military_base_microgrid.png'
+      icon: <BoltIcon sx={{ fontSize: 60 }} color="primary" aria-hidden="true" />,
+      detailContent: 'Interfaces with commercial-off-the-shelf DERMS for lab or field testing of microgrid control, demand response, and grid integration scenarios. ',
+      detailImage: '/pacer-site/images/illustration_military_base_microgrid.png',
+      detailImageAlt: 'Illustration of a military base microgrid showing distributed energy resources and control systems'
     },
     { 
       title: 'Thermal Energy Systems', 
-      description: 'Text here.', 
-      icon: <DeviceThermostatIcon fontSize="large" color="primary" />,
-      detailContent: 'Testing and validation of thermal energy systems including HVAC, heat pumps, and thermal storage solutions.',
-      detailImage: '/pacer-site/images/themal-systems.png'
+      icon: <DeviceThermostatIcon sx={{ fontSize: 60 }} color="primary" aria-hidden="true" />,
+      detailContent: 'Testing aTesting and validation of thermal energy systems including district systems, advanced HVAC, and thermal storage solutions. ',
+      detailImage: '/pacer-site/images/themal-systems.png',
+      detailImageAlt: 'Thermal energy systems diagram showing data centers, server farms, hospital, and other buildings connected to district energy systems, advanced HVAC, and thermal storage solutions.'
     },
     { 
       title: 'Data Centers', 
-      description: 'Text here. ', 
-      icon: <HostIcon fontSize="large" color="primary" />,
-      detailContent: 'Design mitigation strategies that engineer cyber risk out of the complex, multi-owner systems that make up the distribution grid edge.',
-      detailImage: '/pacer-site/images/101317.jpg'
+      icon: <HostIcon sx={{ fontSize: 60 }} color="primary" aria-hidden="true" />,
+      detailContent: 'PACER accelerates the deployment of emerging data center technologies by providing a high-fidelity emulation environment to rigorously test and verify cooling strategies against the Controls Validation Protocol (CVP) before they touch live critical infrastructure. ',
+      detailImage: '/pacer-site/images/101315.jpg',
+      detailImageAlt: 'a blade server, a component of the supercomputer, in the High-Performance Computing (HPC) Data Center at the Energy Systems Integration Facility (ESIF) at NLR. The HPC Data Center is designed to support large-scale energy research and development projects. It is highly energy efficient, utilizing innovative cooling technology and waste heat recovery systems. (Photo by Joe DelNero / NLR 101315)'
     },
     { 
       title: 'Workforce Training', 
-      description: 'Text here', 
-      icon: <CastForEducation fontSize="large" color="primary" />,
-      detailContent: 'Hands-on workforce training programs for building automation, energy management, and grid-interactive systems.',
-      detailImage: '/pacer-site/images/iconnect.png'
+      icon: <CastForEducation sx={{ fontSize: 60 }} color="primary" aria-hidden="true" />,
+      detailContent: 'Hands-on workforce training programs for cyber security, buildings automation, and grid-interactive systems.  ',
+      detailImage: '/pacer-site/images/iconnect.png',
+      detailImageAlt: 'Training session showing participants learning building automation and grid-interactive systems'
     },
   ]
 
@@ -73,7 +73,7 @@ export default function Home() {
               borderBottomLeftRadius: 8,
               borderTopRightRadius: 0,
               borderBottomRightRadius: 0,
-              borderRight: '4px solid #58a4b0',
+              borderRight: '0px solid #58a4b0',
               p: 4,
               position: 'relative',
               flex: 1,
@@ -118,8 +118,8 @@ export default function Home() {
               borderRadius: 0,
               position: 'relative',
               flex: 1,
-              bgcolor: '#2b303a',
-              border: '1px solid',
+              bgcolor: '#025589',
+              border: '0px solid',
               borderColor: 'divider',
               borderTopLeftRadius: 0,
               borderBottomLeftRadius: 0,
@@ -133,7 +133,7 @@ export default function Home() {
           >
             <img 
               src="/pacer-site/images/banner.png" 
-              alt="Controller hardware connected to virtual buildings with controls for various systems like hot water, refrigeratgion, HVAC, and lighting. Then a list of software that works with PACER including ComStock, ResStock, UBANopt, OpenStudio, EnergyPlus, BOPTEST, Alfalfa, and Modelica." 
+              alt="PACER system architecture diagram showing controller hardware connecting to virtual buildings with control systems for hot water, refrigeration, HVAC, and lighting. Compatible software includes ComStock, ResStock, URBANopt, OpenStudio, EnergyPlus, BOPTEST, Alfalfa, and Modelica." 
               style={{ 
                 width: '100%', 
                 height: '100%', 
@@ -165,16 +165,52 @@ export default function Home() {
         <Box sx={{ mt: 2, display: 'grid', gridTemplateColumns: { xs: '1fr', sm: 'repeat(2, 1fr)', md: 'repeat(3, 1fr)' }, gap: 2, alignItems: 'stretch' }}>
           {cards.map((card, i) => (
             <Box key={i} sx={{ display: 'flex' }}>
-              <Card elevation={3} sx={{ display: 'flex', flexDirection: 'column', height: 260, width: '100%' }}>
+              <Card 
+                elevation={3} 
+                sx={{ 
+                  display: 'flex', 
+                  flexDirection: 'column', 
+                  height: 140, 
+                  width: '100%',
+                  cursor: 'pointer',
+                  '&:hover': {
+                    elevation: 6,
+                    transform: 'translateY(-2px)',
+                    transition: 'all 0.3s ease'
+                  },
+                  '&:focus-visible': {
+                    outline: '3px solid #025589',
+                    outlineOffset: '2px'
+                  }
+                }}
+                onClick={() => handleOpenDialog(i)}
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    handleOpenDialog(i);
+                  }
+                }}
+                tabIndex={0}
+                role="button"
+                aria-label={`Learn more about ${card.title}`}
+              >
                 <CardContent sx={{ flexGrow: 1, overflow: 'hidden' }}>
                   <Box sx={{ display: 'flex', alignItems: 'center', gap: 1, mb: 1 }}>
                     {card.icon}
-                    <Typography variant="h3" sx={{ whiteSpace: 'normal', wordBreak: 'break-word', m: 0 }}>{card.title}</Typography>
+                    <Typography variant="h3" component="h3" sx={{ whiteSpace: 'normal', wordBreak: 'break-word', m: 0 }}>{card.title}</Typography>
                   </Box>
-                  <Typography variant="body2" color="text.secondary" sx={{ whiteSpace: 'normal', wordBreak: 'break-word' }}>{card.description}</Typography>
                 </CardContent>
                 <CardActions>
-                  <Button size="small" onClick={() => handleOpenDialog(i)}>Learn more</Button>
+                  <Button 
+                    size="small" 
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      handleOpenDialog(i);
+                    }}
+                    aria-label={`Learn more about ${card.title}`}
+                  >
+                    Learn more
+                  </Button>
                 </CardActions>
               </Card>
             </Box>
@@ -187,24 +223,26 @@ export default function Home() {
           onClose={handleCloseDialog}
           maxWidth="md"
           fullWidth
+          aria-labelledby="capability-dialog-title"
+          aria-describedby="capability-dialog-description"
         >
           {openDialog !== null && (
             <>
-              <DialogTitle>
+              <DialogTitle id="capability-dialog-title">
                 <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
                   {cards[openDialog].icon}
                   {cards[openDialog].title}
                 </Box>
               </DialogTitle>
               <DialogContent>
-                <Typography variant="body1" paragraph>
+                <Typography variant="body1" paragraph id="capability-dialog-description">
                   {cards[openDialog].detailContent}
                 </Typography>
                 {cards[openDialog].detailImage && (
                   <Box sx={{ mt: 2, textAlign: 'center' }}>
                     <img 
                       src={cards[openDialog].detailImage} 
-                      alt={cards[openDialog].title}
+                      alt={cards[openDialog].detailImageAlt || cards[openDialog].title}
                       style={{ 
                         maxWidth: '100%', 
                         height: 'auto',
@@ -215,7 +253,7 @@ export default function Home() {
                 )}
               </DialogContent>
               <DialogActions>
-                <Button onClick={handleCloseDialog}>Close</Button>
+                <Button onClick={handleCloseDialog} aria-label="Close dialog">Close</Button>
               </DialogActions>
             </>
           )}
@@ -224,19 +262,23 @@ export default function Home() {
              <Typography variant="h2" component="h2" gutterBottom sx={{ mt: 4 }} id="active-work">
        Active Work
         </Typography>
-        <Box sx={{ 
-          bgcolor: 'white', 
-          borderRadius: 2, 
-          p: 3, 
-          boxShadow: 1,
-          border: '1px solid',
-          borderColor: 'divider'
-        }}>
+        <Box 
+          component="section"
+          aria-labelledby="active-work"
+          sx={{ 
+            bgcolor: 'white', 
+            borderRadius: 2, 
+            p: 3, 
+            boxShadow: 1,
+            border: '1px solid',
+            borderColor: 'divider'
+          }}
+        >
             <Typography variant="body1" paragraph>
                 <ul>
-                  <li><a href='https://github.com/NREL/alfalfa'>Alfalfa Repository on GitHub</a> </li>
-                  <li><a href='https://github.com/NREL/alfalfa/wiki/Related-Repos'>Alfalfa Wiki</a> </li>
-                  <li><a href='https://github.com/NREL/boptest-service'>BOPTEST Service</a></li>
+                  <li><a href='https://github.com/NREL/alfalfa' target="_blank" rel="noopener noreferrer" aria-label="Alfalfa Repository on GitHub - opens in new window">Alfalfa Repository on GitHub</a> </li>
+                  <li><a href='https://github.com/NREL/alfalfa/wiki/Related-Repos' target="_blank" rel="noopener noreferrer" aria-label="Alfalfa Wiki - opens in new window">Alfalfa Wiki</a> </li>
+                  <li><a href='https://github.com/NREL/boptest-service' target="_blank" rel="noopener noreferrer" aria-label="BOPTEST Service on GitHub - opens in new window">BOPTEST Service</a></li>
                 </ul>
               </Typography>
         </Box>
@@ -258,7 +300,7 @@ export default function Home() {
         }}>
           <img 
             src="/pacer-site/images/timeline.png" 
-            alt="Historical timeline showing PACER's evolution and key milestones from inception to present. 2017-2018: software start. IN2 Startup incubator (~150k); ​2019: into physical lab. Commercial Building Research Infrastructure HIL capability at NREL/ESIF – RTU coordination focus​2021-2022: first cybersecurity. BUILD-SOS, BTO-funded cybersecurity project​ 2022 : start to scale. LDRD (Connected Community Experimental Twin) project to enable equity/behind-the-meter research for NREL ARIES platform (322k);2022: NREL research infrastructure build out: Building Loads and Controls Emulation ($590k); 2022: new feature. OpenADR support for Residential Cold Climate Heat Pump Challenge; 2022-2025: Dedicated BTO funding ~$150-250k/year; 2023-2024: new feature NREL research infrastructure build out: commissioning DERMS for buildings research ($1.1M);2023-ongoing: Advanced Thermal Test and Emulation Network (ATTEN); 2023-2024: large research projects. DOD/ESTCP OpenADR on islanded microgrid ($1.8M​; 2024-2026: large research projects. CESER-funded emulation effort focused on grid impacts of cyberattacks on behind the meter energy equipment (~$5M); 2025: Evolves to modular and flexible ecosystem of capabilities. support Commercial HVAC Challenge with novel HIL/CHIL capabilities; 2026: ITO $120k to advance industrial load flexibility, data center focus" 
+            alt="PACER historical timeline from 2017 to 2026 showing evolution from software startup to comprehensive testing facility. Major milestones include: 2017 Software Started: idea initiated from the Wells Fargo Innovation Incubator (IN2) program;2018 Intro Physical Laboratory: NLR’s commercial buildings research infrastructure lab at ESIF; 2019-2021 First Cybersecurity Project: automated threat/fault detection; 2022 Start to Scale: real-time data connections made to load banks at Flat Irons Campus; 2022 New Capability: compatible with industry communication standards (Modbus, BACnet, OpenADR); 2023 Large Research Projects: Field validation of DOD islanded microgrid with industry partners S&C Electric; 2023-2024 NLR Research Infrastructure Build Out: DERMS installed, compatible with several NLR testbeds; 2023-2026 Thermal Energy Systems: design phase for geothermal heating and cooling lab infrastructure; 2024-2025 Large Research Projects: DOE CESER funded emulation effort focused on grid impacts of cyberattacks on behind the meter energy equipment; 2025 Evolves to Modular Ecosystem of Capabilities: ‘HVAC in a Box’ developed to support controls verification procedure (CVP) testing for several industry partners - Carrier, Lennox, Trane; 2026 New Capability: Testbed for Data Center controls environment"
             style={{ 
               width: '100%', 
               height: 'auto',

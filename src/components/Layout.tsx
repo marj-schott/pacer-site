@@ -13,7 +13,6 @@ import useMediaQuery from '@mui/material/useMediaQuery'
 import { useTheme } from '@mui/material/styles'
 import HomeIcon from '@mui/icons-material/Home'
 import TourIcon from '@mui/icons-material/Tour'
-import InfoIcon from '@mui/icons-material/Info'
 import MiscellaneousServicesIcon from '@mui/icons-material/MiscellaneousServices'
 import HistoryIcon from '@mui/icons-material/History'
 import WorkIcon from '@mui/icons-material/Work'
@@ -85,6 +84,29 @@ export default function Layout() {
   return (
     <>
       <CssBaseline />
+      {/* Skip to main content link for keyboard users */}
+      <a 
+        href="#main-content" 
+        style={{
+          position: 'absolute',
+          left: '-9999px',
+          zIndex: 999,
+          padding: '1em',
+          backgroundColor: '#025589',
+          color: 'white',
+          textDecoration: 'none',
+          borderRadius: '4px'
+        }}
+        onFocus={(e) => {
+          e.currentTarget.style.left = '10px';
+          e.currentTarget.style.top = '10px';
+        }}
+        onBlur={(e) => {
+          e.currentTarget.style.left = '-9999px';
+        }}
+      >
+        Skip to main content
+      </a>
       <Box sx={{ 
         minHeight: '100vh', 
         width: '100%',
@@ -102,13 +124,30 @@ export default function Layout() {
           flexDirection: 'column',
           flexGrow: 1
         }}>
-          <AppBar position="static" sx={{ bgcolor: '#025589', borderRadius: 15, width: '100%' }}>
+          <AppBar position="static" sx={{ bgcolor: '#025589', borderRadius: 15, width: '100%' }} component="nav" aria-label="Main navigation">
             <Toolbar>
             <Typography 
               variant="h6" 
-              sx={{ flexGrow: 1, cursor: 'pointer', fontSize: '1.5rem', fontWeight: 600 }} 
+              component="button"
+              sx={{ 
+                flexGrow: 1, 
+                cursor: 'pointer', 
+                fontSize: '1.5rem', 
+                fontWeight: 600,
+                background: 'none',
+                border: 'none',
+                color: 'inherit',
+                textAlign: 'left',
+                padding: 0,
+                '&:focus-visible': {
+                  outline: '2px solid white',
+                  outlineOffset: '4px',
+                  borderRadius: '4px'
+                }
+              }} 
               noWrap
               onClick={() => navigate('/')}
+              aria-label="PACER Home"
             >
               PACER
             </Typography>
@@ -122,9 +161,15 @@ export default function Layout() {
                 TabIndicatorProps={{
                   style: { height: 4, backgroundColor: '#d3a133' }
                 }}
+                aria-label="Main navigation tabs"
               >
                 {routes.map((r) => (
-                  <Tab key={r.path} icon={r.icon} label={r.label} />
+                  <Tab 
+                    key={r.path} 
+                    icon={r.icon} 
+                    label={r.label} 
+                    aria-label={`Navigate to ${r.label}`}
+                  />
                 ))}
               </Tabs>
             )}
@@ -134,6 +179,9 @@ export default function Layout() {
         {/* Main content (centered) */}
         <Box
           component="main"
+          id="main-content"
+          role="main"
+          aria-label="Main content"
           sx={{
             flexGrow: 1,
             p: 3,
@@ -148,15 +196,28 @@ export default function Layout() {
         </Box>
 
         {/* Footer */}
-        <Box component="footer" sx={{ py: 2, textAlign: 'center', bgcolor: 'background.paper', width: '100%' }}>
-          <Typography variant="body2" color="text.secondary">The National Laboratory of the Rockies is a national laboratory of the <a href="https://www.energy.gov">U.S. Department of Energy</a>, <a href="https://www.energy.gov/cmei/office-critical-minerals-and-energy-innovation">Office of Critical Minerals and Energy Innovation</a>, operated under Contract No. DE-AC36-08GO28308</Typography>
+        <Box component="footer" role="contentinfo" sx={{ py: 2, textAlign: 'center', bgcolor: 'background.paper', width: '100%' }}>
+          <Typography variant="body2" color="text.secondary">
+            The National Laboratory of the Rockies is a national laboratory of the <a href="https://www.energy.gov" target="_blank" rel="noopener noreferrer" aria-label="U.S. Department of Energy - opens in new window">U.S. Department of Energy</a>, <a href="https://www.energy.gov/cmei/office-critical-minerals-and-energy-innovation" target="_blank" rel="noopener noreferrer" aria-label="Office of Critical Minerals and Energy Innovation - opens in new window">Office of Critical Minerals and Energy Innovation</a>, operated under Contract No. DE-AC36-08GO28308
+          </Typography>
         </Box>
 
         {/* Bottom navigation on mobile */}
         {isMobile && (
-          <BottomNavigation showLabels value={currentTab >= 0 ? currentTab : -1} onChange={handleBottomNavChange}>
+          <BottomNavigation 
+            showLabels 
+            value={currentTab >= 0 ? currentTab : -1} 
+            onChange={handleBottomNavChange}
+            component="nav"
+            aria-label="Mobile navigation"
+          >
             {routes.map((r) => (
-              <BottomNavigationAction key={r.path} label={r.label} icon={r.icon} />
+              <BottomNavigationAction 
+                key={r.path} 
+                label={r.label} 
+                icon={r.icon} 
+                aria-label={`Navigate to ${r.label}`}
+              />
             ))}
           </BottomNavigation>
         )}

@@ -80,7 +80,7 @@ export default function VirtualTour() {
           }}>
             <img 
               src="/pacer-site/images/controller.png" 
-              alt="PACER controller hardware overview" 
+              alt="PACER controller hardware setup showing physical control equipment, communication interfaces, and connection points for building automation systems" 
               style={{ 
                 width: '100%', 
                 height: 'auto',
@@ -161,8 +161,7 @@ export default function VirtualTour() {
             <Typography variant="body2" color="text.secondary">
               <img 
               src="/pacer-site/images/graphic-aries.png" 
-              alt="image shwowing the aries connect to PACER through the ARES 
-            " 
+              alt="Network architecture diagram showing ARIES platform connected to PACER through the Advanced Research on Integrated Energy Systems (ARES) interface, illustrating data flow and system integration" 
               style={{ 
                 width: '100%', 
                 height: 'auto',
